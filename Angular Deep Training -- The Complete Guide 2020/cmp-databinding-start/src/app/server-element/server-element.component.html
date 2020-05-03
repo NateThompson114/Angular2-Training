@@ -1,0 +1,19 @@
+<div class="panel panel-default" >
+  <div class="panel-heading" #header>{{ element.name }}</div>
+  <div class="panel-body">
+    <select name="test" id="test" #test (change)="onOptionChange(test.value)">
+      <option value="1">Item 1</option>
+      <option value="2">Item 2</option>
+      <option value="3">Item 3</option>
+    </select>
+    <ng-content></ng-content>
+    <!--
+    <p>
+      <strong *ngIf="element.type === 'server'" style="color: red">{{
+        element.content
+      }}</strong>
+      <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+    </p>
+     -->
+  </div>
+</div>
